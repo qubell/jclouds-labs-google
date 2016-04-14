@@ -68,6 +68,83 @@ public class ImageApiExpectTest extends BaseGoogleComputeEngineApiExpectTest {
       HttpResponse.builder().statusCode(200)
                   .payload(staticPayloadFromResource("/image_list_empty.json")).build();
 
+   public static final HttpRequest LIST_UBUNTU_IMAGES_REQUEST = HttpRequest
+           .builder()
+           .method("GET")
+           .endpoint("https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images")
+           .addHeader("Accept", "application/json")
+           .addHeader("Authorization", "Bearer " + TOKEN).build();
+
+   public static final HttpResponse LIST_UBUNTU_IMAGES_RESPONSE =
+           HttpResponse.builder().statusCode(200)
+                   .payload(staticPayloadFromResource("/image_list_empty.json")).build();
+
+   public static final HttpRequest LIST_GOOGLE_CONTAINERS_IMAGES_REQUEST = HttpRequest
+           .builder()
+           .method("GET")
+           .endpoint("https://www.googleapis.com/compute/v1/projects/google-containers/global/images")
+           .addHeader("Accept", "application/json")
+           .addHeader("Authorization", "Bearer " + TOKEN).build();
+
+   public static final HttpResponse LIST_GOOGLE_CONTAINERS_IMAGES_RESPONSE =
+           HttpResponse.builder().statusCode(200)
+                   .payload(staticPayloadFromResource("/image_list_empty.json")).build();
+
+   public static final HttpRequest LIST_RHEL_IMAGES_REQUEST = HttpRequest
+           .builder()
+           .method("GET")
+           .endpoint("https://www.googleapis.com/compute/v1/projects/rhel-cloud/global/images")
+           .addHeader("Accept", "application/json")
+           .addHeader("Authorization", "Bearer " + TOKEN).build();
+
+   public static final HttpResponse LIST_RHEL_IMAGES_RESPONSE =
+           HttpResponse.builder().statusCode(200)
+                   .payload(staticPayloadFromResource("/image_list_empty.json")).build();
+
+   public static final HttpRequest LIST_CORE_OS_IMAGES_REQUEST = HttpRequest
+           .builder()
+           .method("GET")
+           .endpoint("https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images")
+           .addHeader("Accept", "application/json")
+           .addHeader("Authorization", "Bearer " + TOKEN).build();
+
+   public static final HttpResponse LIST_CORE_OS_IMAGES_RESPONSE =
+           HttpResponse.builder().statusCode(200)
+                   .payload(staticPayloadFromResource("/image_list_empty.json")).build();
+
+   public static final HttpRequest LIST_OPENSUSE_IMAGES_REQUEST = HttpRequest
+           .builder()
+           .method("GET")
+           .endpoint("https://www.googleapis.com/compute/v1/projects/opensuse-cloud/global/images")
+           .addHeader("Accept", "application/json")
+           .addHeader("Authorization", "Bearer " + TOKEN).build();
+
+   public static final HttpResponse LIST_OPENSUSE_IMAGES_RESPONSE =
+           HttpResponse.builder().statusCode(200)
+                   .payload(staticPayloadFromResource("/image_list_empty.json")).build();
+
+   public static final HttpRequest LIST_SUSE_IMAGES_REQUEST = HttpRequest
+           .builder()
+           .method("GET")
+           .endpoint("https://www.googleapis.com/compute/v1/projects/suse-cloud/global/images")
+           .addHeader("Accept", "application/json")
+           .addHeader("Authorization", "Bearer " + TOKEN).build();
+
+   public static final HttpResponse LIST_SUSE_IMAGES_RESPONSE =
+           HttpResponse.builder().statusCode(200)
+                   .payload(staticPayloadFromResource("/image_list_empty.json")).build();
+
+   public static final HttpRequest LIST_WINDOWS_IMAGES_REQUEST = HttpRequest
+           .builder()
+           .method("GET")
+           .endpoint("https://www.googleapis.com/compute/v1/projects/windows-cloud/global/images")
+           .addHeader("Accept", "application/json")
+           .addHeader("Authorization", "Bearer " + TOKEN).build();
+
+   public static final HttpResponse LIST_WINDOWS_IMAGES_RESPONSE =
+           HttpResponse.builder().statusCode(200)
+                   .payload(staticPayloadFromResource("/image_list_empty.json")).build();
+
    public void testGetImageResponseIs2xx() throws Exception {
       HttpRequest get = HttpRequest
               .builder()

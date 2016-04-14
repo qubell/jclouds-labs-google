@@ -22,12 +22,7 @@ import static org.jclouds.googlecomputeengine.GoogleComputeEngineConstants.COMPU
 import static org.jclouds.googlecomputeengine.GoogleComputeEngineConstants.GCE_BOOT_DISK_SUFFIX;
 import static org.jclouds.googlecomputeengine.features.GlobalOperationApiExpectTest.GET_GLOBAL_OPERATION_REQUEST;
 import static org.jclouds.googlecomputeengine.features.GlobalOperationApiExpectTest.GET_GLOBAL_OPERATION_RESPONSE;
-import static org.jclouds.googlecomputeengine.features.ImageApiExpectTest.LIST_DEBIAN_IMAGES_REQUEST;
-import static org.jclouds.googlecomputeengine.features.ImageApiExpectTest.LIST_DEBIAN_IMAGES_RESPONSE;
-import static org.jclouds.googlecomputeengine.features.ImageApiExpectTest.LIST_CENTOS_IMAGES_REQUEST;
-import static org.jclouds.googlecomputeengine.features.ImageApiExpectTest.LIST_CENTOS_IMAGES_RESPONSE;
-import static org.jclouds.googlecomputeengine.features.ImageApiExpectTest.LIST_PROJECT_IMAGES_REQUEST;
-import static org.jclouds.googlecomputeengine.features.ImageApiExpectTest.LIST_PROJECT_IMAGES_RESPONSE;
+import static org.jclouds.googlecomputeengine.features.ImageApiExpectTest.*;
 import static org.jclouds.googlecomputeengine.features.InstanceApiExpectTest.LIST_CENTRAL1B_INSTANCES_REQUEST;
 import static org.jclouds.googlecomputeengine.features.InstanceApiExpectTest.LIST_CENTRAL1B_INSTANCES_RESPONSE;
 import static org.jclouds.googlecomputeengine.features.InstanceApiExpectTest.LIST_INSTANCES_REQUEST;
@@ -281,6 +276,13 @@ public class GoogleComputeEngineServiceExpectTest extends BaseGoogleComputeEngin
               .put(LIST_PROJECT_IMAGES_REQUEST, LIST_PROJECT_IMAGES_RESPONSE)
               .put(LIST_DEBIAN_IMAGES_REQUEST, LIST_DEBIAN_IMAGES_RESPONSE)
               .put(LIST_CENTOS_IMAGES_REQUEST, LIST_CENTOS_IMAGES_RESPONSE)
+              .put(LIST_UBUNTU_IMAGES_REQUEST, LIST_UBUNTU_IMAGES_RESPONSE)
+              .put(LIST_GOOGLE_CONTAINERS_IMAGES_REQUEST, LIST_GOOGLE_CONTAINERS_IMAGES_RESPONSE)
+              .put(LIST_RHEL_IMAGES_REQUEST, LIST_RHEL_IMAGES_RESPONSE)
+              .put(LIST_CORE_OS_IMAGES_REQUEST, LIST_CORE_OS_IMAGES_RESPONSE)
+              .put(LIST_OPENSUSE_IMAGES_REQUEST, LIST_OPENSUSE_IMAGES_RESPONSE)
+              .put(LIST_SUSE_IMAGES_REQUEST, LIST_SUSE_IMAGES_RESPONSE)
+              .put(LIST_WINDOWS_IMAGES_REQUEST, LIST_WINDOWS_IMAGES_RESPONSE)
               .put(LIST_MACHINE_TYPES_REQUEST, LIST_MACHINE_TYPES_RESPONSE)
               .put(LIST_CENTRAL1B_MACHINE_TYPES_REQUEST, LIST_CENTRAL1B_MACHINE_TYPES_RESPONSE)
               .build();
@@ -363,6 +365,13 @@ public class GoogleComputeEngineServiceExpectTest extends BaseGoogleComputeEngin
               .add(LIST_PROJECT_IMAGES_REQUEST)
               .add(LIST_DEBIAN_IMAGES_REQUEST)
               .add(LIST_CENTOS_IMAGES_REQUEST)
+              .add(LIST_UBUNTU_IMAGES_REQUEST)
+              .add(LIST_GOOGLE_CONTAINERS_IMAGES_REQUEST)
+              .add(LIST_RHEL_IMAGES_REQUEST)
+              .add(LIST_CORE_OS_IMAGES_REQUEST)
+              .add(LIST_OPENSUSE_IMAGES_REQUEST)
+              .add(LIST_SUSE_IMAGES_REQUEST)
+              .add(LIST_WINDOWS_IMAGES_REQUEST)
               .add(getInstanceRequestForInstance("test-delete-networks"))
               .add(requestForScopes(COMPUTE_SCOPE))
               .add(deleteNodeRequest)
@@ -390,6 +399,13 @@ public class GoogleComputeEngineServiceExpectTest extends BaseGoogleComputeEngin
               .add(LIST_PROJECT_IMAGES_RESPONSE)
               .add(LIST_DEBIAN_IMAGES_RESPONSE)
               .add(LIST_CENTOS_IMAGES_RESPONSE)
+              .add(LIST_UBUNTU_IMAGES_RESPONSE)
+              .add(LIST_GOOGLE_CONTAINERS_IMAGES_RESPONSE)
+              .add(LIST_RHEL_IMAGES_RESPONSE)
+              .add(LIST_CORE_OS_IMAGES_RESPONSE)
+              .add(LIST_OPENSUSE_IMAGES_RESPONSE)
+              .add(LIST_SUSE_IMAGES_RESPONSE)
+              .add(LIST_WINDOWS_IMAGES_RESPONSE)
               .add(getInstanceResponseForInstanceAndNetworkAndStatus("test-delete-networks", "test-network", Instance
                                                                                                              .Status.RUNNING.name()))
               .add(TOKEN_RESPONSE)
@@ -427,6 +443,13 @@ public class GoogleComputeEngineServiceExpectTest extends BaseGoogleComputeEngin
               .put(LIST_PROJECT_IMAGES_REQUEST, LIST_PROJECT_IMAGES_RESPONSE)
               .put(LIST_DEBIAN_IMAGES_REQUEST, LIST_DEBIAN_IMAGES_RESPONSE)
               .put(LIST_CENTOS_IMAGES_REQUEST, LIST_CENTOS_IMAGES_RESPONSE)
+              .put(LIST_UBUNTU_IMAGES_REQUEST, LIST_UBUNTU_IMAGES_RESPONSE)
+              .put(LIST_GOOGLE_CONTAINERS_IMAGES_REQUEST, LIST_GOOGLE_CONTAINERS_IMAGES_RESPONSE)
+              .put(LIST_RHEL_IMAGES_REQUEST, LIST_RHEL_IMAGES_RESPONSE)
+              .put(LIST_CORE_OS_IMAGES_REQUEST, LIST_CORE_OS_IMAGES_RESPONSE)
+              .put(LIST_OPENSUSE_IMAGES_REQUEST, LIST_OPENSUSE_IMAGES_RESPONSE)
+              .put(LIST_SUSE_IMAGES_REQUEST, LIST_SUSE_IMAGES_RESPONSE)
+              .put(LIST_WINDOWS_IMAGES_REQUEST, LIST_WINDOWS_IMAGES_RESPONSE)
               .put(LIST_MACHINE_TYPES_REQUEST, LIST_MACHINE_TYPES_RESPONSE)
               .put(LIST_CENTRAL1B_MACHINE_TYPES_REQUEST, LIST_CENTRAL1B_MACHINE_TYPES_RESPONSE)
               .build();
@@ -494,6 +517,13 @@ public class GoogleComputeEngineServiceExpectTest extends BaseGoogleComputeEngin
               .add(LIST_PROJECT_IMAGES_REQUEST)
               .add(LIST_DEBIAN_IMAGES_REQUEST)
               .add(LIST_CENTOS_IMAGES_REQUEST)
+              .add(LIST_UBUNTU_IMAGES_REQUEST)
+              .add(LIST_GOOGLE_CONTAINERS_IMAGES_REQUEST)
+              .add(LIST_RHEL_IMAGES_REQUEST)
+              .add(LIST_CORE_OS_IMAGES_REQUEST)
+              .add(LIST_OPENSUSE_IMAGES_REQUEST)
+              .add(LIST_SUSE_IMAGES_REQUEST)
+              .add(LIST_WINDOWS_IMAGES_REQUEST)
               .add(LIST_ZONES_REQ)
               .add(LIST_MACHINE_TYPES_REQUEST)
               .add(GET_NETWORK_REQUEST)
@@ -510,6 +540,13 @@ public class GoogleComputeEngineServiceExpectTest extends BaseGoogleComputeEngin
               .add(LIST_PROJECT_IMAGES_REQUEST)
               .add(LIST_DEBIAN_IMAGES_REQUEST)
               .add(LIST_CENTOS_IMAGES_REQUEST)
+              .add(LIST_UBUNTU_IMAGES_REQUEST)
+              .add(LIST_GOOGLE_CONTAINERS_IMAGES_REQUEST)
+              .add(LIST_RHEL_IMAGES_REQUEST)
+              .add(LIST_CORE_OS_IMAGES_REQUEST)
+              .add(LIST_OPENSUSE_IMAGES_REQUEST)
+              .add(LIST_SUSE_IMAGES_REQUEST)
+              .add(LIST_WINDOWS_IMAGES_REQUEST)
               .add(createDiskRequestForInstance("test-1"))
               .add(GET_ZONE_OPERATION_REQUEST)
               .add(getDiskRequestForInstance("test-1"))
@@ -523,6 +560,13 @@ public class GoogleComputeEngineServiceExpectTest extends BaseGoogleComputeEngin
               .add(LIST_PROJECT_IMAGES_REQUEST)
               .add(LIST_DEBIAN_IMAGES_REQUEST)
               .add(LIST_CENTOS_IMAGES_REQUEST)
+              .add(LIST_UBUNTU_IMAGES_REQUEST)
+              .add(LIST_GOOGLE_CONTAINERS_IMAGES_REQUEST)
+              .add(LIST_RHEL_IMAGES_REQUEST)
+              .add(LIST_CORE_OS_IMAGES_REQUEST)
+              .add(LIST_OPENSUSE_IMAGES_REQUEST)
+              .add(LIST_SUSE_IMAGES_REQUEST)
+              .add(LIST_WINDOWS_IMAGES_REQUEST)
               .add(setTagsRequest)
               .build();
 
@@ -533,6 +577,13 @@ public class GoogleComputeEngineServiceExpectTest extends BaseGoogleComputeEngin
               .add(LIST_PROJECT_IMAGES_RESPONSE)
               .add(LIST_DEBIAN_IMAGES_RESPONSE)
               .add(LIST_CENTOS_IMAGES_RESPONSE)
+              .add(LIST_UBUNTU_IMAGES_RESPONSE)
+              .add(LIST_GOOGLE_CONTAINERS_IMAGES_RESPONSE)
+              .add(LIST_RHEL_IMAGES_RESPONSE)
+              .add(LIST_CORE_OS_IMAGES_RESPONSE)
+              .add(LIST_OPENSUSE_IMAGES_RESPONSE)
+              .add(LIST_SUSE_IMAGES_RESPONSE)
+              .add(LIST_WINDOWS_IMAGES_RESPONSE)
               .add(LIST_ZONES_SHORT_RESPONSE)
               .add(LIST_MACHINE_TYPES_RESPONSE)
               .add(HttpResponse.builder().statusCode(404).build())
@@ -549,6 +600,13 @@ public class GoogleComputeEngineServiceExpectTest extends BaseGoogleComputeEngin
               .add(LIST_PROJECT_IMAGES_RESPONSE)
               .add(LIST_DEBIAN_IMAGES_RESPONSE)
               .add(LIST_CENTOS_IMAGES_RESPONSE)
+              .add(LIST_UBUNTU_IMAGES_RESPONSE)
+              .add(LIST_GOOGLE_CONTAINERS_IMAGES_RESPONSE)
+              .add(LIST_RHEL_IMAGES_RESPONSE)
+              .add(LIST_CORE_OS_IMAGES_RESPONSE)
+              .add(LIST_OPENSUSE_IMAGES_RESPONSE)
+              .add(LIST_SUSE_IMAGES_RESPONSE)
+              .add(LIST_WINDOWS_IMAGES_RESPONSE)
               .add(SUCESSFULL_OPERATION_RESPONSE)
               .add(GET_ZONE_OPERATION_RESPONSE)
               .add(getDiskResponseForInstance("test-1"))
@@ -562,6 +620,13 @@ public class GoogleComputeEngineServiceExpectTest extends BaseGoogleComputeEngin
               .add(LIST_PROJECT_IMAGES_RESPONSE)
               .add(LIST_DEBIAN_IMAGES_RESPONSE)
               .add(LIST_CENTOS_IMAGES_RESPONSE)
+              .add(LIST_UBUNTU_IMAGES_RESPONSE)
+              .add(LIST_GOOGLE_CONTAINERS_IMAGES_RESPONSE)
+              .add(LIST_RHEL_IMAGES_RESPONSE)
+              .add(LIST_CORE_OS_IMAGES_RESPONSE)
+              .add(LIST_OPENSUSE_IMAGES_RESPONSE)
+              .add(LIST_SUSE_IMAGES_RESPONSE)
+              .add(LIST_WINDOWS_IMAGES_RESPONSE)
               .add(SUCESSFULL_OPERATION_RESPONSE)
               .build();
 
